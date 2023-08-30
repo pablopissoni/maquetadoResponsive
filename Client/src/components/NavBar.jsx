@@ -4,7 +4,7 @@ import closeButton from "../assets/images/icon-menu-close.svg";
 import { useState } from "react";
 
 export const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
