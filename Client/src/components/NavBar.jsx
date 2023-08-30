@@ -22,8 +22,8 @@ export const NavBar = () => {
 
       <ul
         className={`${
-          isOpen ? "hidden" : ""
-        } underline underline-offset-4 absolute bg-white top-0 right-0 w-[256px] p-[24px] h-full text-[18px] sm:flex sm:items-center sm:w-[438px] sm:place-content-around sm:p-0 sm:h-auto sm:relative sm:text-[16px]`}
+          isOpen ? "hidden" : "" 
+        } font-inter underline underline-offset-4 absolute bg-white top-0 right-0 w-[256px] p-[24px] h-full text-[18px] sm:flex sm:items-center sm:w-[438px] sm:place-content-around sm:p-0 sm:h-auto sm:relative sm:text-[16px]`}
       >
         <li
           className={`${
