@@ -13,17 +13,22 @@ export const NavBar = () => {
   //*---------------------------------------------------
   return (
     <>
+      {!isOpen && (
+        <div
+          className="fixed top-0 left-0 w-full h-full bg-black/30  backdrop-blur-sm "
+          onClick={handleClick}
+        />
+      )}
+
       <ul
-        className={`${isOpen ? "hidden" : ""} 
-        bg-gray-200 absolute top-0 right-0  w-[256px] p-[24px] h-full
-          sm:flex text-[18px] sm:w-[438px] sm:p-0 sm:h-auto
-          sm:place-content-around sm:text-[16px] sm:relative 
-          sm:items-center`}
+        className={`${
+          isOpen ? "hidden" : ""
+        } underline underline-offset-4 absolute bg-white top-0 right-0 w-[256px] p-[24px] h-full text-[18px] sm:flex sm:items-center sm:w-[438px] sm:place-content-around sm:p-0 sm:h-auto sm:relative sm:text-[16px]`}
       >
         <li
-          className={`
-            ${isOpen ? "hidden" : ""}
-             cursor-pointer sm:hidden  flex place-content-end`}
+          className={`${
+            isOpen ? "hidden" : ""
+          } cursor-pointer sm:hidden  flex place-content-end`}
         >
           <img
             className="w-8 h-8 mb-[87px]"
@@ -32,40 +37,39 @@ export const NavBar = () => {
             alt=""
           />
         </li>
-
-        <li>
-          <a className="hover:text-SoftRed" href="">
+        <li className="mb-8 sm:mb-0">
+          <a className="hover:text-SoftRed sm:text-4" href="#">
             Home
           </a>
         </li>
-        <li>
-          <a className="hover:text-SoftRed" href="">
+        <li className="mb-8 sm:mb-0">
+          <a className="hover:text-SoftRed" href="#">
             New
           </a>
         </li>
-        <li>
-          <a className="hover:text-SoftRed" href="">
+        <li className="mb-8 sm:mb-0">
+          <a className="hover:text-SoftRed" href="#">
             Popular
           </a>
         </li>
-        <li>
-          <a className="hover:text-SoftRed" href="">
+        <li className="mb-8 sm:mb-0">
+          <a className="hover:text-SoftRed" href="#">
             Trending
           </a>
         </li>
-        <li>
-          <a className="hover:text-SoftRed" href="">
+        <li className="mb-8 sm:mb-0">
+          <a className="hover:text-SoftRed" href="#">
             Categories
           </a>
         </li>
       </ul>
       <img
-        src={burgerMenu}
-        alt="Menu Hamburgesa"
-        className={`w-10 h-4 cursor-pointer ${
+        className={`${
           isOpen ? "" : "hidden"
-        } sm:hidden`}
+        } w-10 h-4 cursor-pointer sm:hidden`}
+        src={burgerMenu}
         onClick={handleClick}
+        alt=""
       />
     </>
   );
